@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class HealingItemBase : ItemBase
 {
-    public int _hpAdding;
+    public int HpAdding;
 
     protected abstract void Healing();
 }

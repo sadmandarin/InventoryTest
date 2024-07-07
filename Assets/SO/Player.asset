@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: "\u0413\u0435\u0440\u043E\u0439"
   _hp: 100
-  _headArmor: 0
-  _body_armor: 0
+  _headArmor: 10
+  _body_armor: 10
