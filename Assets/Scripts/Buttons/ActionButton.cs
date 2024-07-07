@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.IO;
 using UnityEditor;
+using UnityEditor.PackageManager.UI;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,16 +12,22 @@ using UnityEngine.UI;
 public class ActionButton : ButtonBase
 {
     private ItemBase _itemType;
+    private InventoryUI _inventoryUI;
+    private SetPopUpWindow _window;
 
     [SerializeField] private Text _buttonText;
     [SerializeField] private Inventory _inventory;
-
+    [SerializeField] private Player _player;
     [SerializeField] private Sprite _pistolSprite;
     [SerializeField] private Sprite _smgSprite;
 
     protected override void Start()
     {
         _itemType = GetComponentInParent<SetPopUpWindow>().Item;
+
+        _inventoryUI = FindObjectOfType<InventoryUI>();
+
+        _window = GetComponentInParent<SetPopUpWindow>();
 
         if (_itemType is HealingItemBase)
         {
@@ -44,11 +51,19 @@ public class ActionButton : ButtonBase
     {
         if (_itemType is HealingItemBase)
         {
+            HealingItemBase healingItem = _itemType as HealingItemBase;
+
+            Heal();
+
             Debug.Log("Лечение");
         }
 
         else if (_itemType is ArmorItemBase)
         {
+            ArmorItemBase armorItem  = _itemType as ArmorItemBase;
+
+            Equip(armorItem);
+
             Debug.Log("Армор");
         }
 
@@ -56,12 +71,16 @@ public class ActionButton : ButtonBase
         {
             BuyPistolAmmo();
 
+            _inventoryUI.UpdateInventoryUI();
+
             Debug.Log("Патроны пистолета");
         }
 
         else if (_itemType is SMGAmmo)
         {
             BuySMGAmmo();
+
+            _inventoryUI.UpdateInventoryUI();
 
             Debug.Log("Патроны автомата");
         }
@@ -107,6 +126,30 @@ public class ActionButton : ButtonBase
 
         _inventory.AddItem(_pistolAmmo);
         EditorUtility.SetDirty(_inventory);
+
+    }
+
+    void Equip(ArmorItemBase armorItem)
+    {
+        if (armorItem._armorType == ArmorItemBase.ArmorType.Head)
+        {
+            _player._headArmor = armorItem._armor;
+
+            _player.SetHeadArmor(armorItem);
+        }
+        else if (armorItem._armorType == ArmorItemBase.ArmorType.Body)
+        {
+            _player._body_armor = armorItem._armor;
+
+            _player.SetBodyArmor(armorItem);
+        }
+
+        Destroy(_window.gameObject);
+    }
+
+    //Реализовать лечение
+    void Heal()
+    {
 
     }
 

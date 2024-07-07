@@ -15,12 +15,11 @@ MonoBehaviour:
   _items:
   - {fileID: 11400000, guid: 2491891b3229ea2498d2a2858dc437e1, type: 2}
   - {fileID: 11400000, guid: 4d0e30439dadd0a4a9c042e87e801905, type: 2}
-  - {fileID: 11400000, guid: 39ac461548164824cb4ddd3e7760781b, type: 2}
   - {fileID: 11400000, guid: 2c9c07abedb732940bbb2ec7c70633a7, type: 2}
   - {fileID: 11400000, guid: c16d21927c9908a429d3b817f79a7618, type: 2}
   - {fileID: 11400000, guid: c2c5c64733b96a7409e8f0a03d1d35c2, type: 2}
+  - {fileID: 11400000, guid: a3d52bb1582adc14ea9c56f488ae8ef5, type: 2}
   - {fileID: 11400000, guid: 39ac461548164824cb4ddd3e7760781b, type: 2}
-  - {fileID: 11400000, guid: b874b5546d99fce49a46e6712b2a76a5, type: 2}
   _totalPistolRound: 50
-  _totalSMGRound: 200
+  _totalSMGRound: 100
   _totalFirstHealthKit: 6

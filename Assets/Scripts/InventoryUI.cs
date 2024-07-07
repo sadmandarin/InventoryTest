@@ -24,7 +24,7 @@ public class InventoryUI : MonoBehaviour
             }
             else
             {
-                //inventorySlots[i].ClearSlot();
+                _inventorySlots[i].ClearSlot();
             }
         }
     }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Inventory", menuName = "MainInventory", order = 1)]
@@ -39,6 +40,18 @@ public class Inventory : ScriptableObject
 
             if (item is FirstKit)
                 _totalFirstHealthKit += item._itemCount;
+        }
+    }
+
+    public void DeleteFromInventory(ItemBase item)
+    {
+        foreach (var _item in _items)
+        {
+            if (item.name == _item.name)
+            {
+                _items.Remove(item);
+                break;
+            }
         }
     }
 

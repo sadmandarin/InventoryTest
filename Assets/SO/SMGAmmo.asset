@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SMGAmmo
   m_EditorClassIdentifier: 
   _itemType: 0
-  _itemName: "\u041F\u0430\u0442\u0440\u043E\u043D\u044B \u0434\u043B\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0430"
+  _itemName: SMGAmmo
   _itemImage: {fileID: 21300000, guid: 10ba1fb2477e51c4aa1b42eb80815478, type: 3}
   _itemWeight: 0.03
   _maxCount: 100

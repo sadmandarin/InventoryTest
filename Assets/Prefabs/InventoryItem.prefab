@@ -240,6 +240,7 @@ MonoBehaviour:
   icon: {fileID: 8632535740717693275}
   amountText: {fileID: 5476430114499560906}
   item: {fileID: 0}
+  _popUpWindow: {fileID: 5904400401016509348, guid: dd7cfc466b3cc134ab3dd7e74f7d78b5, type: 3}
   index: 0
 --- !u!225 &5692361041771979292
 CanvasGroup:
