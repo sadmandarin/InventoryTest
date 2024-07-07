@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3512cc422526e44b680ae9ab38d1d0, type: 3}
+  m_Name: Inventory
+  m_EditorClassIdentifier: 
+  _items:
+  - {fileID: 11400000, guid: 2491891b3229ea2498d2a2858dc437e1, type: 2}
+  - {fileID: 11400000, guid: 4d0e30439dadd0a4a9c042e87e801905, type: 2}
+  - {fileID: 11400000, guid: 39ac461548164824cb4ddd3e7760781b, type: 2}
+  - {fileID: 11400000, guid: 2c9c07abedb732940bbb2ec7c70633a7, type: 2}
+  - {fileID: 11400000, guid: c16d21927c9908a429d3b817f79a7618, type: 2}
+  - {fileID: 11400000, guid: c2c5c64733b96a7409e8f0a03d1d35c2, type: 2}
+  - {fileID: 11400000, guid: 39ac461548164824cb4ddd3e7760781b, type: 2}
+  - {fileID: 11400000, guid: b874b5546d99fce49a46e6712b2a76a5, type: 2}
+  _totalPistolRound: 50
+  _totalSMGRound: 200
+  _totalFirstHealthKit: 6
